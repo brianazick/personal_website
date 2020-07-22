@@ -1,0 +1,26 @@
+brianzick.net {
+        # designates the root directory
+        root * /home/ubuntu/personal_website
+
+        # uses gzip encoding
+        encode gzip
+
+        # use caddy templates?
+        templates
+
+        # leverage the file server directive
+        file_server
+
+        # register TLS under my email
+       tls brian.a.zick@gmail.com
+
+        # logs access attempt to a file 
+        # uses default log rolling settings 
+        log 
+
+        # handles HTTP errors by refering to http.cat
+        handle_errors {          
+                rewrite * /{http.error.status_code}
+                reverse_proxy https://http.cat
+        }
+}
