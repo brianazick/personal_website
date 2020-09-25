@@ -12,7 +12,7 @@ brianzick.net {
         file_server
 
         # register TLS under my email
-       tls brian.a.zick@gmail.com
+        tls brian.a.zick@gmail.com
 
         # logs access attempt to a file 
         # uses default log rolling settings 
