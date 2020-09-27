@@ -1,4 +1,78 @@
-.homepage_body_sidebar {
+/* Global */
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('Assets/cmunss.otf');
+}
+
+body {
+    font-family: "Computer Modern", sans-serif;
+}
+
+/* Frontpage */
+
+/* Page content */
+
+.main, .frontpage {
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+    column-gap: 40px;
+    font-size: 18px;
+}
+
+/* Create two unequal columns that floats next to each other */
+
+.column_left {
+    float: left;
+    width: 25%;
+    flex-grow: 1;
+    padding-right: 50px;
+}
+
+.column_right {
+    float: left;
+    width: 70%;
+    flex-grow: 3;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.frontpage img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    display: block;
+    float: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Sidebar */
+
+.frontpage_body_sidebar {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -7,25 +81,8 @@
     padding: .5rem 1rem
 }
 
-.homepage_body_row {
-    display: flex;
-}
-
-.homepage_body_column {
-    flex: 50%;
-    text-align: center;
-}
-
 .sidebar_column {
     flex: 33%;
-}
-
-h1 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
 }
 
 /* The side navigation menu */
@@ -57,13 +114,6 @@ p {
 
 .sidenav a:hover {
     color: #f1f1f1;
-}
-
-/* Page content */
-
-.main {
-    margin-left: 200px;
-    /* Same as the width of the sidenav */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
