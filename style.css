@@ -1,10 +1,23 @@
-.row {
+.homepage_body_sidebar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem
+}
+
+.homepage_body_row {
     display: flex;
 }
 
-.column {
+.homepage_body_column {
     flex: 50%;
     text-align: center;
+}
+
+.sidebar_column {
+    flex: 33%;
 }
 
 h1 {
@@ -13,4 +26,53 @@ h1 {
 
 p {
     text-align: center;
+}
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Page content */
+
+.main {
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
