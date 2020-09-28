@@ -33,14 +33,12 @@ body {
 .column_left {
     float: left;
     width: 25%;
-    flex-grow: 1;
     padding-right: 50px;
 }
 
 .column_right {
     float: left;
     width: 70%;
-    flex-grow: 3;
 }
 
 /* Clear floats after the columns */
@@ -125,4 +123,27 @@ body {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+/* Classics Page */
+
+.classics_body_row {
+    display: flex;
+}
+
+.classics_body_column {
+    flex: 50%;
+    text-align: center;
+}
+
+.classics_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.classics_intro p {
+    width: 50%;
 }
